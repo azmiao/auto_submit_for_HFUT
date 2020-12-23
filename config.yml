@@ -1,0 +1,75 @@
+#登陆相关配置
+login:
+  #开放的模拟登陆api服务器地址
+  api: "http://www.zimo.wiki:8080/wisedu-unified-login-api-v1.0/api/login"
+#用户组配置
+users:
+  #单个用户配置
+  - user:
+      #username 学号，改成要自动打卡的学号
+      username: '2018214520'
+      #password 今日校园登录密码，改！
+      password: 'xxxxxxxxxxx'
+      #address 地址，定位信息，不用改
+      address: 中国安徽省合肥市蜀山区丹霞路
+      #lon 当前位置经度，不改
+      lon: '117.20991041734'
+      #lat 当前位置纬度，不改
+      lat: '31.780672863954'
+      #email 接受通知消息的邮箱，改成自己的邮箱
+      email: xxxxxxxxx@xxxxxx.com
+      #school 学校全称，不改
+      school: 合肥工业大学
+  #多用户配置，将下面的注释去掉并修改信息即可
+  # - user:
+  #     #username 学号，改成要自动打卡的学号
+  #     username: '2018214520'
+  #     #password 今日校园登录密码，改！
+  #     password: 'xxxxxxxxxxx'
+  #     #address 地址，定位信息，不用改
+  #     address: 中国安徽省合肥市蜀山区丹霞路
+  #     #lon 当前位置经度，不改
+  #     lon: '117.20991041734'
+  #     #lat 当前位置纬度，不改
+  #     lat: '31.780672863954'
+  #     #email 接受通知消息的邮箱，改成自己的邮箱
+  #     email: xxxxxxxxx@xxxxxx.com
+  #     #school 学校全称，不改
+  #     school: 合肥工业大学
+
+#今日校园相关配置，按自己学院的改，下面的以数学学院为例
+cpdaily:
+  #表单组默认选项配置
+  defaults:
+    #表单默认选项配置，按顺序，注意，只有标必填项的才处理
+    - default:
+        #表单项类型，对应今日校园接口返回的fieldType字段，1代表文本，2代表单选，3代表多选，4代表图片
+        type: 2
+        #表单项标题
+        title: 你是否是走读学生？
+        #表单项默认值
+        value: 否
+    - default:
+        type: 2
+        title: 今天你是否请假离校？
+        value: 否，一直在校
+    - default:
+        type: 2
+        title: 今天你是否有发热症状？
+        value: 无
+    - default:
+        type: 2
+        title: 今天你是否有咳嗽、呼吸困难、腹泻症状？
+        value: 无
+    - default:
+        type: 1
+        title: 你目前所在地区？
+        value: 安徽省/合肥市/蜀山区
+
+Info:
+  Email:
+    enable: true
+    server: xxxxxxxx # 填写邮件的smtp服务器，百度一下：qq/163等等邮箱smtp服务器，即可
+    port: xx # 填写对应邮件服务器的端口号，百度一下你就知道
+    account: 'xxxxxxxxxxxxxxx@xxx.com' # 邮件服务器登录用户名（发件人）
+    password: 'xxxxxxxxxxxxxxx' # 邮件服务器登录授权码，在邮箱设置里可创建
