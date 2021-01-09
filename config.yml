@@ -1,7 +1,9 @@
 #登陆相关配置
 login:
-  #开放的模拟登陆api服务器地址
-  api: "http://www.zimo.wiki:8080/wisedu-unified-login-api-v1.0/api/login"
+  # 开放的模拟登陆api服务器地址
+  # 下方两个任选一即可，，默认使用子墨的，如需更换，请在第一个的前面加上#，然后去掉第二个的#
+  api: "http://www.zimo.wiki:8080/wisedu-unified-login-api-v1.0/api/login" # 子墨大佬的api，使用人较多，万一崩了可以换下面那个
+  # api: "http://39.97.110.165:27015/azmiao-api/api/login" # 自己搭建的api，使用人少，几乎不会崩，但可能我偶尔会关关开开之类的，有时候可能会不能用，等一段时间就好了
 #用户组配置
 users:
   #单个用户配置
@@ -12,9 +14,9 @@ users:
       password: 'xxxxxxxxxxx'
       #address 地址，定位信息，不用改
       address: 中国安徽省合肥市蜀山区丹霞路
-      #lon 当前位置经度，不改
+      #lon 当前位置经度，可以不改
       lon: '117.20991041734'
-      #lat 当前位置纬度，不改
+      #lat 当前位置纬度，可以不改
       lat: '31.780672863954'
       #email 接受通知消息的邮箱，改成自己的邮箱
       email: xxxxxxxxx@xxxxxx.com
