@@ -9,7 +9,7 @@
 
 # 简易教程
 
-## 小白可看详细教程：https://www.594594.xyz/
+## 小白可看详细教程：https://www.594594.xyz/2020/12/23/auto_submit_for_HFUT/
 
 1. clone 或者 下载 此仓库到本地
     ```shell script
